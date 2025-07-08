@@ -1,51 +1,33 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
-
-<!DOCTYPE html>
+<html>
 
 <head>
- <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://toffeelive.com/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.2/dist/plyr.css" />
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
 
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-
-
-
-<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-
-
-
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
-
-<link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.4/css/halfmoon.min.css" rel="stylesheet" />
-
+<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
 <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js">
-
-<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.5/dist/hls.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 
+    <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
 
+    <style>
 
-
-
-  <title>JOIN TV4WAP</title>
-  <style>
-    body {
+body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -82,20 +64,14 @@
        
 }
 
-        
-        </style>
-</head>
 
+</style>
 
-
-
-
-  <!-- Video player -->
-<div id="container"><video id="player" class="vid1" autoplay="yes" oncanplay="this.muted=false" poster="https://blogger.googleusercontent.com/img/a/AVvXsEiGqaZeRBZ6Y7yV5ZYSRiNRhBa5q9_EMx7R5TJcHd3XJwwHh2YhNOGt76Y4vEcUIjvIaA7W-Tw1RyMLP-4WZwVHA4mk18zwXl7HdSL5WabprIasDOWJO7jpL0zTQB4p_y7X0Rv0xwe-cJ-GvxofAgeRp2FIiNgB90n_b8Cqw0sAaZqVhJg_fi9UyfSO8KY"  controls>
+<body class="plyr"> <video id="player" autoplay="yes" oncanplay="this.muted=false" poster="https://blogger.googleusercontent.com/img/a/AVvXsEiGqaZeRBZ6Y7yV5ZYSRiNRhBa5q9_EMx7R5TJcHd3XJwwHh2YhNOGt76Y4vEcUIjvIaA7W-Tw1RyMLP-4WZwVHA4mk18zwXl7HdSL5WabprIasDOWJO7jpL0zTQB4p_y7X0Rv0xwe-cJ-GvxofAgeRp2FIiNgB90n_b8Cqw0sAaZqVhJg_fi9UyfSO8KY" id="player" playsinline controls>
     <source id="m3u8-url" src="" type="application/x-mpegURL">
 
   </video>
-</div>
+
 
   <script type="text/javascript">
     var urlParams = new URLSearchParams(window.location.search);
@@ -104,34 +80,40 @@
 
     document.getElementById("m3u8-url").setAttribute("src", maxvalue);
   </script>
+    <script>
+        setTimeout(videovisible, 5000)
 
-  <script>
-  var controls =
-[
-    'play-large', // The large play button in the center
-   // 'restart', // Restart playback
-   // 'rewind', // Rewind by the seek time (default 10 seconds)
-    'fast-forward', // Fast forward by the seek time (default 10 seconds)
-    'progress', // The progress bar and scrubber for playback and buffering
-    'current-time', // The current time of playback
-    'duration', // The full duration of the media
-    'mute', // Toggle mute
-    'volume', // Volume control
-    'settings', // Settings menu
-    'pip', // Picture-in-picture (currently Safari only)
-    'airplay', // Airplay (currently Safari only)
-    'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
-    'fullscreen' // Toggle fullscreen
-];
-const player = new Plyr('.vid1',{controls});
-</script>
+        function videovisible() {
+            document.getElementById('loading').style.display = 'none';
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const e = document.querySelector("video"),
+                n = e.getElementsByTagName("source")[0].src,
+                o = {};
+            if (Hls.isSupported()) {
+                var config = {
+                    maxMaxBufferLength: 100,
+                };
+                const t = new Hls(config);
+                t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
+                    const s = t.levels.map(e => e.height);
+                    o.quality = {
+                        default: s[0],
+                        options: s,
+                        forced: !0,
+                        onChange: e => (function(e) {
+                            window.hls.levels.forEach((n, o) => {
+                                n.height === e && (window.hls.currentLevel = o)
+                            })
+                        })(e)
+                    };
+                    new Plyr(e, o)
+                }), t.attachMedia(e), window.hls = t
+            } else {
+                new Plyr(e, o)
+            }
+        });
+    </script>
+</body>
 
-<script>const player = new Plyr('#player')
-
-
-</script>
-<style>
-  :root {
-  --plyr-color-main:gold;
-    --plyr-video-control-color	:red;
-}</style>
+</html>
